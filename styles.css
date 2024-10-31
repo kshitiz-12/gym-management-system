@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #000;
+    --snd-bg-color: #111111; /* Fixed background color */
+    --text-color: #fff;
+    --main-color: #45ffca;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 8% 2rem;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: transparent;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.nav-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+    box-shadow: 0 0 18px var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none; /* Displayed on smaller screens */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.home-content span {
+    font-size: 4rem;
+    font-weight: 550;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 2.0;
+}
+
+.home-image img {
+    width: 45vw;
+}
+
+.home-image::before {
+    content: 'FITNESS';
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: var(--text-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+/* Services Section */
+.services {
+    background: var(--snd-bg-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 6.5rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin-top: 4.1rem;
+}
+
+.row {
+    background: var(--bg-color);
+    border-radius: 27px;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+
+.row img {
+    height: auto;
+    width: 100%;
+    border-radius: 27px;
+    margin-bottom: 1.4rem;
+}
+
+.row h4 {
+    font-size: 2.5rem; /* Adjusted size */
+    font-weight: 700; /* Corrected */
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.row:hover {
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px) scale(1.04);
+    cursor: pointer;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+.about-img {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.about-img img {
+    width: 100%; /* Adjust this as necessary */
+    border-radius: 27px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 4rem; /* Increased size for the heading */
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.8rem; /* Increased size for paragraph text */
+    margin-bottom: 1.5rem; /* Optional: add spacing between paragraphs */
+}
+
+/* Pricing Section */
+.pricing-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.pricing-content .row {
+    background: var(--bg-color);
+    border-radius: 27px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px var(--main-color);
+    transition: all 0.5s ease;
+}
+
+.pricing-content .row:hover {
+    transform: translateY(-5px) scale(1.04);
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block; /* Show menu icon on small screens */
+    }
+    .navbar {
+        display: none; /* Hide navbar on small screens */
+        flex-direction: column; /* Stack items */
+        position: absolute; /* Position fixed for mobile */
+        background: rgba(0, 0, 0, 0.8);
+        top: 80px; /* Position below header */
+        right: 0;
+        width: 100%;
+        transition: max-height 0.3s ease-in;
+    }
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+        max-height: 400px; /* Allow space for items */
+        overflow: hidden; /* Hide overflow */
+    }
+    .navbar a {
+        margin: 1rem; /* Space between items */
+    }
+    .home-content h3 {
+        font-size: 4rem; /* Smaller heading size */
+    }
+    .home-content h1 {
+        font-size: 4.5rem; /* Smaller heading size */
+    }
+    .home-image img {
+        width: 80vw; /* Adjust image size */
+    }
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color); /* Ensure the background color is set */
+    border-radius: 1rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color); /* Set text color */
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--text-color);
+    box-shadow: 0 0 1.6rem var(--main-color);
+}
+
+#join-btn {
+    background: var(--main-color); /* Use the same background color */
+    color: var(--bg-color); /* Set text color */
+    border: none; /* Remove any default border */
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2.8rem;
+    cursor: pointer; /* Ensure pointer on hover */
+    transition: background-color 0.3s ease;
+}
+
+#join-btn:hover {
+    background: var(--text-color); /* Change background on hover */
+    color: var(--main-color); /* Change text color on hover */
+}
+/* Signup Section */
+.signup-section {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url('background-image.jpg') no-repeat center center/cover; /* Replace with your image path */
+    z-index: 1000;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-content {
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.signup-content h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.login-options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.switch-container {
+    display: flex;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.switch-option {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.switch-option:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.switch-option.active {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-form label {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+#signup-form input {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    font-size: 1.6rem;
+}
+
+#signup-form button {
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#signup-form button:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+.not-registered {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.not-registered a {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* Registration Section styles */
+.registration-section {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    justify-content: center; /* Center the form */
+    align-items: center; /* Center the form */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+.registration-content {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 300px; /* Fixed width for consistency */
+    max-width: 90%; /* Responsive max width */
+}
+
+/* Close button styles for registration */
+.close-registration-btn {
+    cursor: pointer; /* Pointer cursor */
+    font-size: 20px; /* Size for better visibility */
+    position: absolute; /* Positioning within the form */
+    right: 10px;
+    top: 10px;
+}
+
+/* Form elements */
+form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Space between inputs */
+}
+
+label {
+    font-weight: bold; /* Bold labels for better visibility */
+}
+
+input {
+    padding: 10px; /* Padding for comfort */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Consistent font size */
+}
+
+input:focus {
+    border-color: #007BFF; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    background-color: #007BFF; /* Primary button color */
+    color: #fff; /* White text */
+    border: none; /* Remove default border */
+    padding: 10px; /* Padding for comfort */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Consistent font size */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+.dashboard-content {
+    margin-top: 2rem;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem; /* Space between sections */
+}
+
+.section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.section p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+/* Form styling for adding members */
+#add-member-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-member-form label {
+    margin-top: 1rem;
+}
+
+#add-member-form input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    font-size: 1.6rem;
+}
+
+#add-member-form button {
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-member-form button:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}

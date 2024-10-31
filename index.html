@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Fitness</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">Royal <span>Fitness</span></a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <div class="top-btn">
+            <button class="nav-btn" id="join-btn">Join Us</button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="home-content">
+            <h3>Build Your </h3>
+            <h1>Dream Physique</h1>
+            <h3><span class="multiple-text">Bodybuilding</span></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis.</p>
+            <button class="btn" id="signup-btn">Join Us</button>
+        </div>
+
+        <div class="home-image">
+            <img src="dcfeb6b62fe59d01b0f193cc254f70a5.jpg" alt="Fitness Model">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-content">
+            <div class="row">
+                <img src="physical fitness.jpg" alt="">
+                <h4>Physical Fitness</h4>
+            </div>
+            <div class="row">
+                <img src="weight gain.jpeg" alt="">
+                <h4>Weight Gain</h4>
+            </div>
+            <div class="row">
+                <img src="strength training.jpg" alt="">
+                <h4>Strength Training</h4>
+            </div>
+            <div class="row">
+                <img src="weight lifting.jpg" alt="">
+                <h4>Weight Lifting</h4>
+            </div>
+            <div class="row">
+                <img src="running.avif" alt="">
+                <h4>Running</h4>
+            </div>
+            <div class="row">
+                <img src="fat loss.jpg" alt="">
+                <h4>Fat Loss</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading">About <span>Us</span></h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="about.jpg" alt="">
+            </div>
+            <div class="about-text">
+                <h3>Who We Are</h3>
+                <p>At Royal Fitness, we are dedicated to helping you achieve your fitness goals. Our experienced trainers and state-of-the-art equipment ensure that you have everything you need to succeed.</p>
+                <p>Join us and become part of a community that prioritizes health and wellness. Together, we can push boundaries and redefine what fitness means.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2 class="heading">Our <span>Pricing</span></h2>
+        <div class="pricing-content">
+            <div class="row">
+                <h4>Basic Plan</h4>
+                <span>$29.99/month</span>
+                <p>Access to gym facilities and group classes.</p>
+            </div>
+            <div class="row">
+                <h4>Premium Plan</h4>
+                <span>$49.99/month</span>
+                <p>Includes personal training sessions and nutrition guidance.</p>
+            </div>
+            <div class="row">
+                <h4>Ultimate Plan</h4>
+                <span>$69.99/month</span>
+                <p>All-inclusive access with unlimited classes and personal training.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-Up Section (Initially Hidden) -->
+    <section class="signup-section" id="signup-section" style="display: none;">
+        <div class="signup-content">
+            <span class="close-btn">&times;</span> <!-- Close button -->
+            <h2>Join Royal Fitness</h2>
+            
+            <!-- Switch Options -->
+            <div class="login-options">
+                <div class="switch-container">
+                    <div class="switch-option active" id="trainer-option">Login as Trainer</div>
+                    <div class="switch-option" id="member-option">Login as Member</div>
+                </div>
+            </div>
+
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Not Registered Yet -->
+            <p class="not-registered">Not Registered Yet? <a href="#" id="signup-link">Sign Up Here</a></p>
+        </div>
+    </section>
+
+    <!-- Gym Registration Section (Initially Hidden) -->
+    <section class="registration-section" id="registration-section" style="display: none;">
+        <div class="registration-content">
+            <span class="close-registration-btn">&times;</span> <!-- Close button -->
+            <h2>Join Our Gym</h2>
+
+            <form id="registration-form">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" required>
+
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+
+                <label for="goal">Fitness Goals:</label>
+                <input type="text" id="goal" placeholder="e.g., Weight Loss, Muscle Gain" required>
+
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" required>
+
+                <button type="submit">Join Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Member Dashboard Section -->
+    <section class="member-dashboard" id="member-dashboard" style="display: none;">
+        <h2>Welcome, Member!</h2>
+        <div class="dashboard-content">
+            <div class="section">
+                <h3>Today's Workout Routine</h3>
+                <p id="workout-routine">Here is your workout for today.</p>
+            </div>
+            <div class="section">
+                <h3>Diet Plan</h3>
+                <p id="diet-plan">Here's your diet plan for today.</p>
+            </div>
+            <div class="section">
+                <h3>Attendance</h3>
+                <p id="attendance-status">Your attendance record.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainer Dashboard Section -->
+    <section class="trainer-dashboard" id="trainer-dashboard" style="display: none;">
+        <h2>Welcome, Trainer!</h2>
+        <div class="dashboard-content">
+            <div class="section">
+                <h3>Add Member</h3>
+                <form id="add-member-form">
+                    <label for="new-member-name">Member Name:</label>
+                    <input type="text" id="new-member-name" required>
+                    <label for="new-member-email">Member Email:</label>
+                    <input type="email" id="new-member-email" required>
+                    <button type="submit">Add Member</button>
+                </form>
+            </div>
+            <div class="section">
+                <h3>Manage Members</h3>
+                <p id="member-list">List of members will be displayed here.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
